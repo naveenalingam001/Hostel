@@ -119,8 +119,8 @@ class RoomAction extends Component {
                             )}
                         </div>
                         <div className="col">
-                            <label htmlFor="time">Date and Time</label>
-                            <input type="text" id="time" placeholder="Date and time?"
+                            <label htmlFor="time">Date</label>
+                            <input type="date" id="time" placeholder="Date and time?"
                                 className={classnames("form-control", {
                                     "is-invalid": errors.time
                                 })}
@@ -128,6 +128,7 @@ class RoomAction extends Component {
                                 name="time"
                                 value={this.state.time}
                             />
+                            {/* <input type='date'></input> */}
                             {errors.time && (
                                 <div className="invalid-tooltip">{errors.time}</div>
                             )}

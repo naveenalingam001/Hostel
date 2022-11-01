@@ -26,7 +26,8 @@ class Routes extends Component {
                     <PrivateRoute exact path="/room/:id" component={RoomAction} />
                     <PrivateRoute exact path="/staff" component={Staff} />
                     <PrivateRoute exact path="/studentdetails/:id" component={StudentDetails} />
-                    <Route exact path="/register" component={Register} />
+                    {/* <Route exact path="/register" component={Register} /> */}
+                    <Route path="/register" render={props => <Register {...props} />} />
                     <Route exact path="/login" component={Login} />
                     <Redirect to="/dashboard" />
                 </Switch>

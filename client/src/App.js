@@ -6,7 +6,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import { Provider } from "react-redux";
 import store from "./store";
-
+import { BrowserRouter } from "react-router-dom";
 import Routes from './components/Routes';
 import "./App.css";
 
@@ -32,9 +32,11 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
-          <Routes />
-        </Router>
+        <BrowserRouter>
+          <Router>
+            <Routes />
+          </Router>
+        </BrowserRouter>
       </Provider>
     );
   }
